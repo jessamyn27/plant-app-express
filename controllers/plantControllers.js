@@ -17,12 +17,12 @@ const Plants = require('../models/plants');
 // create a home route
 router.get('/', (req, res) => {
 
-  Plants.find({}, (err, allPlants) => {
+  Plants.find({}, (err, foundPlants) => {
     if (err) {
       res.send(err);
     } else {
       res.render('index.ejs', {
-        plants: allPlants
+        plants: foundPlants
       })
     }
   })
@@ -39,7 +39,7 @@ router.post('/', (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      res.redirect(`/plants/${createdPlants.id}`);
+      res.redirect(`/plants/${createdPlant.id}`);
     }
   })
 });
@@ -83,15 +83,13 @@ router.put('/:id', (req, res) => {
 
 // delete a route with db and id
 router.delete('/:id', (req, res) => {
-  Plants.findbyIdAndRemove(req.params.id, (err, deletedPlant) => {
+  Plants.findbyIdAndRemove(req.params.id, (err, plant) => {
     if (err) {
+      res.send(err);
     } else {
-      res.redirect('/plants')
+      res.redirect('/plants');
     }
   })
 });
-
-
-
 
 module.exports = router;
