@@ -4,6 +4,7 @@ const bodyParser     = require('body-parser');
 const methodOverride = require('method-override');
 
 require('./db/db');
+
 const plantControllers = require('./controllers/plantControllers');
 
 app.use(bodyParser.urlencoded({extended: false}))

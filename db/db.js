@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // mongoose.connect('mongodb://localhost/plantdb');
 
-mongoose.connect('mongodb://localhost:27017/plant');
+mongoose.connect('mongodb://localhost:27017/plants');
 
 // listeners
 mongoose.connection.on('connected', () => {
