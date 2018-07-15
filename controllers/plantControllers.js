@@ -73,7 +73,7 @@ router.put('/:id', (req, res) => {
       res.send(err);
     } else {
     res.redirect('/plants');
-    })
+    }
   })
 });
 

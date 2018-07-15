@@ -6,7 +6,7 @@ name: String,
 color: String,
 sunnySpot: Boolean
 });
-
+//
 // const plants = [
 //     {
 //         name:'indian paintbrush',
@@ -25,6 +25,6 @@ sunnySpot: Boolean
 //         sunnySpot: true
 //     }
 // ];
-
+//
 // calling my colleciton
 module.exports = mongoose.model('Plant', plantSchema);
