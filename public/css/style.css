@@ -1,0 +1,19 @@
+body {
+  color: white;
+  background-color: #E16F7C;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+li {
+    font-size: 20px;
+    padding: 5px 0 5px 0;
+}
+ul {
+    list-style-type: none;
+}
+/*
+img {
+    margin: 5px 0 px 0;
+    border-color: pink;
+    border-width: 5px;
+} */

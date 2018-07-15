@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <h1>Edit Plant Page</h1>
+
+  <form method="POST" action="/plants/<%=plant.id%>?_method=PUT">
+    Name: <input type="text" name="name" value="<%=plant.name%>"/>
+    Color: <input type="text" name="color" value="<%=plant.color%>"/>
+    Goes In A Sunny Spot:
+    <input type="checkbox" name="sunnySpot"
+
+    <% if(plant.sunnySpot === true){ %>
+        checked
+    <% } %>
+    />
+    <br/>
+    <input type="submit" value="Submit Changes"/>
+  </form>
+
+</body>
+</html>
