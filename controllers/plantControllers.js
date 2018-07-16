@@ -3,6 +3,8 @@ const router = express.Router();
 
 const Plants = require('../models/plants');
 
+router.use(express.static('public'));
+
 // create a new plant
 // Plants.create(req.body, (err, createdPlants) => {
 // if (err) {
@@ -83,7 +85,8 @@ router.put('/:id', (req, res) => {
 
 // delete a route with db and id
 router.delete('/:id', (req, res) => {
-  Plants.findbyIdAndRemove(req.params.id, (err, plant) => {
+
+  Plants.findByIdAndRemove(req.params.id, (err, deletedPlant) => {
     if (err) {
       res.send(err);
     } else {

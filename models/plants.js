@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 
 //my Schema (model) for my data
 const plantSchema = new mongoose.Schema({
-name: String,
+name: {type: String, required: true},
 color: String,
-sunnySpot: Boolean
+sunnySpot: {type: Boolean},
 });
 //
 // const plants = [
